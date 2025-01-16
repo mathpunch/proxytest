@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Replacer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+    }
+    .input-container {
+      text-align: center;
+    }
+    input[type="text"] {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    input[type="text"]:focus {
+      border-color: #007bff;
+    }
+    .output {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #333;
+    }
+    iframe {
+      margin-top: 20px;
+      width: 80%;
+      height: 60%;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="input-container">
+    <input type="text" id="urlInput" placeholder="Enter a URL and press Enter">
+    <div class="output" id="output"></div>
+  </div>
+
+  <!-- Add iframe here -->
+  <iframe id="iframe" style="display: none;"></iframe>
+
+  <script>
+    document.getElementById('urlInput').addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        const inputUrl = event.target.value.trim();
+        const baseUrl = "https://camouflageisthebest.jakesthoughts.xyz/static/iframe.html#";
+        let processedUrl = inputUrl;
+
+        // Add https:// if not present
+        if (!processedUrl.startsWith("http://") && !processedUrl.startsWith("https://")) {
+          processedUrl = "https://" + processedUrl;
+        }
+
+        // Build the final URL
+        const finalUrl = baseUrl + encodeURIComponent(processedUrl);
+
+        // Display the result
+        const outputElement = document.getElementById('output');
+        outputElement.textContent = "Loading URL in iframe...";
+        outputElement.style.color = 'green';
+
+        // Show the iframe and set its src
+        const iframe = document.getElementById('iframe');
+        iframe.style.display = 'block';
+        iframe.src = finalUrl;
+      }
+    });
+  </script>
+</body>
+</html>
 
