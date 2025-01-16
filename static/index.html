@@ -19,7 +19,7 @@
             color: white;
         }
 
-        .topbar button {
+        .topbar a {
             margin-right: 15px;
             padding: 0;
             background: none;
@@ -61,25 +61,17 @@
 <body>
     <div class="topbar">
         <div>
-            <button id="gamesBtn">
-                <img src="games-icon.png" alt="Games">
-            </button>
-            <button id="appsBtn">
-                <img src="apps-icon.png" alt="Apps">
-            </button>
+            <a href="https://example.com/games" id="gamesBtn">
+                <img src="https://www.svgrepo.com/show/334024/joystick-button.svg" alt="Games">
+            </a>
+            <a href="https://example.com/apps" id="appsBtn">
+                <img src="https://static-00.iconduck.com/assets.00/power-apps-icon-512x507-yv3upwyz.png" alt="Apps">
+            </a>
         </div>
         <div class="typewriter" id="typewriter"></div>
     </div>
 
     <script>
-        document.getElementById('gamesBtn').addEventListener('click', function() {
-            alert('Games button clicked!');
-        });
-
-        document.getElementById('appsBtn').addEventListener('click', function() {
-            alert('Apps button clicked!');
-        });
-
         const typewriterElement = document.getElementById('typewriter');
         const typewriterTexts = ["Welcome to our site!", "Explore games!", "Discover apps!", "Enjoy your stay!"];
         let textIndex = 0;
