@@ -62,59 +62,39 @@
             color: #00ff00;
             text-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00, 0 0 45px #004d00;
             margin-bottom: 50px;
+            text-align: center;
         }
 
-        .topbar {
+        .button-container {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            background-color: rgba(42, 42, 42, 0.8);
-            padding: 15px 30px;
-            width: 100%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        .topbar a {
-            text-decoration: none;
-            margin-right: 20px;
-        }
-
-        .topbar img {
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .topbar img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+            gap: 20px;
         }
 
         .button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 10px 20px;
-            margin-right: 10px;
-            border-radius: 8px;
+            padding: 20px 40px;
+            border-radius: 25px;
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.3);
             color: white;
-            font-size: 16px;
+            font-size: 20px;
             text-decoration: none;
-            transition: background 0.3s, transform 0.3s;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
         }
 
         .button:hover {
             background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
         .typewriter {
-            position: relative;
-            top: 20px;
-            font-size: 20px;
+            margin-top: 30px;
+            font-size: 24px;
             font-weight: bold;
             color: #00ccff;
             white-space: nowrap;
@@ -134,36 +114,15 @@
             from, to { border-color: transparent; }
             50% { border-color: #00ccff; }
         }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            .topbar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .topbar img {
-                width: 40px;
-                height: 40px;
-                margin-bottom: 10px;
-            }
-
-            .typewriter {
-                font-size: 16px;
-                width: 20ch;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="particles" id="particles"></div>
     <div class="logo">cyber shade</div>
-    <div class="topbar">
-        <div>
-            <a href="gms.html" class="button" id="gamesBtn">games</a>
-            <a href="aps.html" class="button" id="appsBtn">apps</a>
-            <a href="srch.html" class="button" id="searchBtn">search</a>
-        </div>
+    <div class="button-container">
+        <a href="gms.html" class="button" id="gamesBtn">games</a>
+        <a href="aps.html" class="button" id="appsBtn">apps</a>
+        <a href="srch.html" class="button" id="searchBtn">search</a>
     </div>
     <div class="typewriter" id="typewriter"></div>
 
