@@ -57,6 +57,28 @@
             50% { border-color: white; }
         }
 
+        .games-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .game-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .game-button:hover {
+            background-color: #45a049;
+        }
+
         /* Responsive Design */
         @media (max-width: 600px) {
             .topbar {
@@ -91,6 +113,12 @@
             </a>
         </div>
         <div class="typewriter" id="typewriter"></div>
+    </div>
+
+    <div class="games-container">
+        <button class="game-button">Game 1</button>
+        <button class="game-button">Game 2</button>
+        <button class="game-button">Game 3</button>
     </div>
 
     <script>
