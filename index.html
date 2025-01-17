@@ -3,53 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberShade</title>
+    <title>cybershade</title>
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e1e;
+            color: white;
         }
 
         .topbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #333;
-            padding: 10px 20px;
-            color: white;
+            background-color: #2a2a2a;
+            padding: 15px 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         .topbar a {
-            margin-right: 15px;
-            padding: 0;
-            background: none;
-            border: none;
-            cursor: pointer;
+            text-decoration: none;
+            margin-right: 20px;
         }
 
         .topbar img {
-            width: 40px;
-            height: 40px;
-            border-radius: 5px;
-            transition: transform 0.3s;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .topbar img:hover {
             transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
         }
 
         .typewriter {
-            font-size: 16px;
+            font-size: 18px;
             white-space: nowrap;
             overflow: hidden;
-            border-right: 2px solid white;
-            width: 20ch;
-            animation: typing 3s steps(20, end), blink-caret 0.5s step-end infinite;
+            border-right: 3px solid white;
+            width: 25ch;
+            animation: typing 4s steps(25, end) infinite, blink-caret 0.7s step-end infinite;
         }
 
         @keyframes typing {
             from { width: 0; }
-            to { width: 20ch; }
+            to { width: 25ch; }
         }
 
         @keyframes blink-caret {
@@ -57,26 +57,23 @@
             50% { border-color: white; }
         }
 
-        .games-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .topbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-        .game-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 20px;
-            margin: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+            .topbar img {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 10px;
+            }
 
-        .game-button:hover {
-            background-color: #45a049;
+            .typewriter {
+                font-size: 16px;
+                width: 20ch;
+            }
         }
     </style>
 </head>
@@ -84,27 +81,21 @@
     <div class="topbar">
         <div>
             <a href="gms.html" id="gamesBtn">
-                <img src="game-icon-png-4486.png" alt="Games">
+                <img src="game-icon-png-4486.png" alt="games">
             </a>
             <a href="aps.html" id="appsBtn">
-                <img src="https://i.pinimg.com/736x/e9/a0/94/e9a0948c39cf174574fb28d8250090cc.jpg" alt="Apps">
+                <img src="https://i.pinimg.com/736x/e9/a0/94/e9a0948c39cf174574fb28d8250090cc.jpg" alt="apps">
             </a>
             <a href="srch.html" id="searchBtn">
-                <img src="https://e7.pngegg.com/pngimages/492/584/png-clipart-magnifying-glass-drawing-above-all-enterprises-inc-ear-photography-people.png" alt="Search">
+                <img src="https://e7.pngegg.com/pngimages/492/584/png-clipart-magnifying-glass-drawing-above-all-enterprises-inc-ear-photography-people.png" alt="search">
             </a>
         </div>
         <div class="typewriter" id="typewriter"></div>
     </div>
 
-    <div class="games-container">
-        <button class="game-button">Game 1</button>
-        <button class="game-button">Game 2</button>
-        <button class="game-button">Game 3</button>
-    </div>
-
     <script>
         const typewriterElement = document.getElementById('typewriter');
-        const typewriterTexts = ["Welcome to our site!", "Explore games!", "Discover apps!", "Enjoy your stay!"];
+        const typewriterTexts = ["welcome to our site!", "explore games!", "discover apps!", "enjoy your stay!"];
         let textIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
