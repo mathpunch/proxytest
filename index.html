@@ -91,12 +91,37 @@
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
         }
 
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
         .typewriter {
-            font-size: 18px;
+            position: relative;
+            top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #00ccff;
             white-space: nowrap;
             overflow: hidden;
-            border-right: 3px solid white;
+            border-right: 3px solid #00ccff;
             width: 25ch;
+            text-align: center;
             animation: typing 4s steps(25, end) infinite, blink-caret 0.7s step-end infinite;
         }
 
@@ -107,7 +132,7 @@
 
         @keyframes blink-caret {
             from, to { border-color: transparent; }
-            50% { border-color: white; }
+            50% { border-color: #00ccff; }
         }
 
         /* Responsive Design */
@@ -135,18 +160,12 @@
     <div class="logo">cyber shade</div>
     <div class="topbar">
         <div>
-            <a href="API/games.html" id="gamesBtn">
-                <img src="game-icon-png-4486.png" alt="games">
-            </a>
-            <a href="API/apps.html" id="appsBtn">
-                <img src="https://i.pinimg.com/736x/e9/a0/94/e9a0948c39cf174574fb28d8250090cc.jpg" alt="apps">
-            </a>
-            <a href="API/search.html" id="searchBtn">
-                <img src="https://e7.pngegg.com/pngimages/492/584/png-clipart-magnifying-glass-drawing-above-all-enterprises-inc-ear-photography-people.png" alt="search">
-            </a>
+            <a href="gms.html" class="button" id="gamesBtn">games</a>
+            <a href="aps.html" class="button" id="appsBtn">apps</a>
+            <a href="srch.html" class="button" id="searchBtn">search</a>
         </div>
-        <div class="typewriter" id="typewriter"></div>
     </div>
+    <div class="typewriter" id="typewriter"></div>
 
     <script>
         const typewriterElement = document.getElementById('typewriter');
