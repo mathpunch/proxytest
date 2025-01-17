@@ -3,195 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cybershade</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(45deg, #004d00, #001a4d);
-            background-size: 400% 400%;
-            animation: backgroundAnimation 15s infinite;
-            color: white;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-
-        .particle {
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            background: rgba(0, 255, 0, 0.3);
-            border-radius: 50%;
-            animation: particleMove 20s linear infinite;
-        }
-
-        @keyframes particleMove {
-            from {
-                transform: translate(0, 0);
-                opacity: 1;
-            }
-            to {
-                transform: translate(-200px, -200px);
-                opacity: 0;
-            }
-        }
-
-        .logo {
-            position: relative;
-            font-size: 4rem;
-            font-weight: bold;
-            color: #00ff00;
-            text-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00, 0 0 45px #004d00;
-            margin-bottom: 50px;
-            text-align: center;
-        }
-
-        .button-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            border-radius: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            text-decoration: none;
-            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-            width: 100px;
-            height: 100px;
-        }
-
-        .button img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .button:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .button img:hover {
-            transform: scale(1.1);
-        }
-
-        .typewriter {
-            margin-top: 30px;
-            font-size: 24px;
-            font-weight: bold;
-            color: #00ccff;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 3px solid #00ccff;
-            width: 25ch;
-            text-align: center;
-            animation: typing 4s steps(25, end) infinite, blink-caret 0.7s step-end infinite;
-        }
-
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 25ch; }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: #00ccff; }
-        }
-    </style>
+    <title>ixl</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="particles" id="particles"></div>
-    <div class="logo">cyber shade</div>
-    <div class="button-container">
-        <a href="gms" class="button" id="gamesBtn">
-            <img src="game-icon-png-4486.png" alt="Games">
-        </a>
-        <a href="aps" class="button" id="appsBtn">
-            <img src="https://i.pinimg.com/736x/e9/a0/94/e9a0948c39cf174574fb28d8250090cc.jpg" alt="Apps">
-        </a>
-        <a href="srch" class="button" id="searchBtn">
-            <img src="https://e7.pngegg.com/pngimages/492/584/png-clipart-magnifying-glass-drawing-above-all-enterprises-inc-ear-photography-people.png" alt="Search">
-        </a>
+    <!-- Loading screen -->
+    <div id="loadingScreen">
+        <div class="loader"></div>
     </div>
-    <div class="typewriter" id="typewriter"></div>
+
+    <div class="main"></div>
+
+    <h1>Welcome To mathpunch V3</h1>
+    <div class="button-container">
+        <h2>Games</h2>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/grasshopper/'; }, 350);">Roblox</button>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/duck/'; }, 350);">Block Blast</button>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/pig/'; }, 350);">OvO</button>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/panda/'; }, 350);">BitLife</button>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/kitty/'; }, 350);">Stickmanhook</button>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/dog/'; }, 350);">Super Mario 64</button>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/bear/'; }, 350);">Tiny Fishing</button>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/snake/'; }, 350);">Tap Tap Shots</button>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/shark/'; }, 350);">Drive Mad</button>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/zebra/'; }, 350);">Emulator JS</button>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/turtle/'; }, 350);">Wordle Unlimited</button>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/doggy/'; }, 350);">Fruit Ninja</button>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/fox/'; }, 350);">Rooftop Snipers</button>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/bat/'; }, 350);">Tunnel Rush</button>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/wolf/'; }, 350);">Burrito Bison</button>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/monkey/'; }, 350);">Trash Truck Simulator</button>
+
+        <h2>Games For Emulator JS</h2>
+        <button onclick="setTimeout(() => { window.location.href='https://github.com/ixlmathgg/flashy/raw/main/Mario Kart.zip'; }, 350);">DS: Mario Kart</button>
+        <button onclick="setTimeout(() => { window.location.href='https://github.com/ixlmathgg/Licky/raw/main/Pokemon Red Fire.zip'; }, 350);">GBA: Pokémon Red Fire</button>
+        <button onclick="setTimeout(() => { window.location.href='https://github.com/mathpunch/didactic-fortnight/raw/refs/heads/main/LEGO Star Wars II.zip'; }, 350);">GBA: Lego Star Wars II</button>
+
+        <h2>Proxy</h2>
+        <button onclick="alert('A Proxy is A Website That You Can Go On Almost Any Websites'); setTimeout(() => { window.location.href='http://campus.rocketpride.com'; }, 350);">Server 1</button>
+        <button onclick="alert('A Proxy is A Website That You Can Go On Almost Any Websites'); setTimeout(() => { window.location.href='http://classroom.rocketpride.com'; }, 350);">Server 2</button>
+        <button onclick="alert('A Proxy is A Website That You Can Go On Almost Any Websites'); setTimeout(() => { window.location.href='http://library.rocketpride.com'; }, 350);">Server 3</button>
+        <button onclick="alert('A Proxy is A Website That You Can Go On Almost Any Websites'); setTimeout(() => { window.location.href='http://portal.rocketpride.com'; }, 350);">Server 4</button>
+        <button onclick="alert('A Proxy is A Website That You Can Go On Almost Any Websites'); setTimeout(() => { window.location.href='http://scholar.rocketpride.com'; }, 350);">Server 5</button>
+        <button onclick="alert('A Proxy is A Website That You Can Go On Almost Any Websites'); setTimeout(() => { window.location.href='http://academy.rocketpride.com'; }, 350);">Server 6</button>
+        <button onclick="alert('A Proxy is A Website That You Can Go On Almost Any Websites'); setTimeout(() => { window.location.href='http://learn.rocketpride.com'; }, 350);">Server 7</button>
+        <button onclick="alert('A Proxy is A Website That You Can Go On Almost Any Websites'); setTimeout(() => { window.location.href='http://projects.rocketpride.com'; }, 350);">Server 8</button>
+        <button onclick="alert('A Proxy is A Website That You Can Go On Almost Any Websites'); setTimeout(() => { window.location.href='http://resources.rocketpride.com'; }, 350);">Server 9</button>
+        <button onclick="alert('A Proxy is A Website That You Can Go On Almost Any Websites'); setTimeout(() => { window.location.href='http://studyhub.rocketpride.com'; }, 350);">Server 10</button>
+
+        <h2>Extra</h2>
+        <button onclick="setTimeout(() => { window.location.href='about:blank'; }, 350);">Nothing Here Yet</button>
+        <button onclick="setTimeout(() => { window.location.href='about:blank'; }, 350);">Nothing Here Yet</button>
+
+        <h2>Games Requests</h2>
+        <button onclick="setTimeout(() => { window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSc6PG1pB-SmSDqf_gJ_DYWV5HWFtGCcWpgGf2EaS0EpKcICqQ/viewform?usp=sf_link'; }, 350);">Click Me</button>
+
+        <h2>Adblocker</h2>
+        <button onclick="setTimeout(() => { window.location.href='https://www.icloud.com/shortcuts/60f5af18cbfe435f886450e6a4c332e5'; }, 350);">Click Me</button>
+
+        <h2>Chatting</h2>
+        <button onclick="setTimeout(() => { window.location.href='https://mathpunch.github.io/chatting/'; }, 350);">Click Me</button>
+
+        <h2>Backup Links</h2>
+        <button onclick="setTimeout(() => { window.location.href='https://extramath.github.io/'; }, 350);">Click Me</button>
+        <button onclick="setTimeout(() => { window.location.href='https://solixmath.github.io'; }, 350);">Click Me</button>
+
+        <h2>Prank Shortcut</h2>
+        <button onclick="setTimeout(() => { window.location.href='https://www.icloud.com/shortcuts/4e9a1be2aace434981f58226805be72f'; }, 350);">Click Me</button>
+    </div>
+
+    <footer>
+        Made By Ozzy
+    </footer>
 
     <script>
-        const typewriterElement = document.getElementById('typewriter');
-        const typewriterTexts = ["welcome to our site!", "explore games!", "discover apps!", "enjoy your stay!"];
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-
-        function typeEffect() {
-            if (!isDeleting && charIndex <= typewriterTexts[textIndex].length) {
-                typewriterElement.textContent = typewriterTexts[textIndex].substring(0, charIndex++);
-                setTimeout(typeEffect, 100);
-            } else if (isDeleting && charIndex > 0) {
-                typewriterElement.textContent = typewriterTexts[textIndex].substring(0, charIndex--);
-                setTimeout(typeEffect, 50);
-            } else {
-                isDeleting = !isDeleting;
-                if (!isDeleting) {
-                    textIndex = (textIndex + 1) % typewriterTexts.length;
-                }
-                setTimeout(typeEffect, 1000);
-            }
-        }
-
-        typeEffect();
-
-        // Particle effect generation
-        const particlesContainer = document.getElementById('particles');
-
-        function createParticle() {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-
-            const size = Math.random() * 10 + 5;
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.top = `${Math.random() * 100}%`;
-            particle.style.left = `${Math.random() * 100}%`;
-
-            particle.style.animationDuration = `${Math.random() * 10 + 10}s`;
-
-            particlesContainer.appendChild(particle);
-
-            setTimeout(() => particle.remove(), 20000);
-        }
-
-        setInterval(createParticle, 500);
+        // Disable scrolling during loading
+        window.onload = function() {
+            setTimeout(function() {
+                // Fade out the loading screen
+                document.getElementById('loadingScreen').classList.add('fadeOut');
+                // Enable scrolling once the loading screen fades out
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            }, 2000); // Wait for 2 seconds before fading out
+        };
     </script>
 </body>
 </html>
